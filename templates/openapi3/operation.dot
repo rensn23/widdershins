@@ -1,6 +1,12 @@
+{{? data.operation.tags[0].split('/').length < 2}}
 {{= data.tags.section }}
 
 ## {{= data.operationUniqueName}}
+{{?}}
+
+{{? data.operation.tags[0].split('/').length >= 2}}
+### {{= data.operationUniqueName}}
+{{?}}
 
 {{? data.operation.operationId}}
 <a id="opId{{=data.operation.operationId}}"></a>
