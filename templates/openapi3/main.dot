@@ -53,10 +53,11 @@ Base URLs:
 {{ for (var r in data.resources) { }}
 {{ data.resource = data.resources[r]; }}
 
-{{= data.tags.section }}
 {{? c != r }}
 <h2 id="{{=data.title_prefix+'-'+r.split('/').join('-').split(' ').join('-').split('(').join('-').split(')').join('-')}}">{{= r.split('/')[1]}}</h2>
 {{?}}
+
+{{= data.tags.section }}
 
 
 {{? data.resource.description }}{{= data.resource.description}}{{?}}
