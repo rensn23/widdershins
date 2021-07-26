@@ -47,11 +47,17 @@ Base URLs:
 
 {{ for (var element_key in data.current_category) { }}
 {{ r = data.current_category[element_key]; }}
+
+
+
 {{ data.resource = data.resources[r]; }}
 
-<h1 id="{{=data.title_prefix+'-'+r.split(' ').join('-').split('(').join('-').split(')').join('-')}}">{{= r}}</h1>
+{{? c != r }}
+<h2 id="{{=data.title_prefix+'-'+r.split('/').join('-').split(' ').join('-').split('(').join('-').split(')').join('-')}}">{{= r.split('/')[1]}}</h2>
+{{?}}
 
 {{= data.tags.section }}
+
 
 {{? data.resource.description }}{{= data.resource.description}}{{?}}
 
