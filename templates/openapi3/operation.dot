@@ -1,6 +1,5 @@
-{{= data.tags.section }}
 {{? data.operation.tags[0].split('/').length < 2}}
-
+{{= data.tags.section }}
 
 ## {{= data.operationUniqueName}}
 {{?}}
