@@ -49,7 +49,7 @@ Base URLs:
 {{ r = data.current_category[element_key]; }}
 
 
-{{ for (var r in data.resources) { }}
+
 {{ data.resource = data.resources[r]; }}
 
 {{? c != r }}
