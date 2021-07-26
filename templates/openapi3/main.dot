@@ -47,9 +47,6 @@ Base URLs:
 
 {{ for (var element_key in data.current_category) { }}
 {{ r = data.current_category[element_key]; }}
-
-
-
 {{ data.resource = data.resources[r]; }}
 
 {{? c != r }}
