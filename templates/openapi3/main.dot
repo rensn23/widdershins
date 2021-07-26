@@ -72,6 +72,7 @@ Base URLs:
 
 {{ } /* of resources */ }}
 
+{{? data.api.components && data.api.components.schemas }}
 # Schemas
 
 {{ for (var s in data.components.schemas) { }}
